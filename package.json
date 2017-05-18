@@ -1,0 +1,39 @@
+{
+  "name": "aframe-pano-portal",
+  "version": "0.0.1",
+  "description": "Place 360 content as portals into a aframe scene.",
+  "main": "index.js",
+  "scripts": {
+    "build": "browserify examples/main.js -o examples/build.js",
+    "dev": "budo examples/main.js:examples/build.js --port 8000 --live --open -- --no-browser-field",
+    "dist": "webpack index.js dist/aframe-pano-portal.js && webpack -p index.js dist/aframe-pano-portal.min.js",
+    "postpublish": "npm run dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PyryM/aframe-pano-portal.git"
+  },
+  "keywords": [
+    "aframe",
+    "aframe-component",
+    "aframe-vr",
+    "vr",
+    "mozvr",
+    "webvr"
+  ],
+  "author": "Pyry Matikainen <pkmatikainen@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pyrym/aframe-pano-portal/issues"
+  },
+  "homepage": "https://github.com/pyrym/aframe-pano-portal/#readme",
+  "devDependencies": {
+    "aframe": "^0.5.0",
+    "browserify": "^12.0.1",
+    "budo": "^7.1.0",
+    "webpack": "^1.12.9",
+    "glslify": "^6.0.2"
+  },
+  "dependencies": {
+  }
+}
