@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <script src="../build.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <!-- Asset management system. -->
+      <a-assets>
+        <img id="pano-a" src="pano_a.jpg">
+        <img id="pano-b" src="pano_b.jpg">
+      </a-assets>
+
+      <a-box width="5.25" height="0.1" position="3.0 0.0 3.0" depth="5.25" color="#333333"></a-box>
+      <a-box width="5.25" height="0.1" position="-3.0 0.0 -3.0" depth="5.25" color="#333333"></a-box>
+      <a-box width="5.25" height="0.1" position="-3.0 0.0 3.0" depth="5.25" color="#CCCCCC"></a-box>
+      <a-box width="5.25" height="0.1" position="3.0 0.0 -3.0" depth="5.25" color="#CCCCCC"></a-box>
+
+      <a-icosahedron detail="2" position="0.0 1.5 0.0" scale="0.49 0.49 0.49"
+                wireframe="true" color="#FFFFFF"
+                transparent="true" opacity="0.2"></a-icosahedron>
+      <a-icosahedron detail="3" position="-0.75 1.5 -0.75" scale="-0.5 -0.5 -0.5"
+                material="shader: pano-portal; src: #pano-a; warpParams: -1.0 1.5 0.0 0.0"></a-icosahedron>
+
+      <a-icosahedron detail="2" position="0.0 1.5 0.0" scale="0.49 0.49 0.49"
+                wireframe="true" color="#FFFFFF"
+                transparent="true" opacity="0.2"></a-icosahedron>
+      <a-icosahedron detail="3" position="0.75 1.5 0.75" scale="-0.5 -0.5 -0.5"
+                material="shader: pano-portal; src: #pano-b; warpParams: -1.0 1.5 0.0 0.0"></a-icosahedron>
+
+      <a-sky id="sky" color="#AAAAAA"></a-sky>
+    </a-scene>
+  </body>
+</html>
