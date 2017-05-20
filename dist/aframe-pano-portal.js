@@ -47,7 +47,7 @@
 	AFRAME.registerShader('pano-portal', {
 	  schema: {
 	    src: {type: 'map', is: 'uniform'},
-	    warpParams: {type: 'vec4', is: 'uniform', default: "-1.0 1.5 0.3 0.2"}
+	    warpParams: {type: 'vec4', is: 'uniform', default: "1.5 0.5 0.3 0.1"}
 	  },
 	  vertexShader: __webpack_require__(1),
 	  fragmentShader: __webpack_require__(2),
@@ -56,7 +56,7 @@
 	AFRAME.registerShader('pano-portal-dither', {
 	  schema: {
 	    src: {type: 'map', is: 'uniform'},
-	    warpParams: {type: 'vec4', is: 'uniform', default: "-1.0 1.5 0.3 0.2"}
+	    warpParams: {type: 'vec4', is: 'uniform', default: "1.5 0.5 0.3 0.1"}
 	  },
 	  vertexShader: __webpack_require__(1),
 	  fragmentShader: __webpack_require__(3),
