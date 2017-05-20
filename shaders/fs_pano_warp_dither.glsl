@@ -24,7 +24,6 @@ void main() {
 
   float distToPixel = length(worldViewDir);
   float dd = (distToPixel - warpParams.z) / (warpParams.w - warpParams.z);
-  //float dd = 1.0 - distToPixel;
   float dthresh = clamp(dd, 0.0, 1.0);
   vec2 uv = panoMap(sampleDir);
   if(rand(gl_FragCoord.xy) < dthresh) {
